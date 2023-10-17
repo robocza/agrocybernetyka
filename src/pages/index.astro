@@ -4,9 +4,16 @@ import Central from '@layouts/elements/arrangement/Central.astro';
 ---
 
 <Layout title="Agrocybernetyka">
-    <div class="h-screen font-mono ">
-        <Central>
-            agrocybernetyka.pl (alpha)
-        </Central>
+    <div class="flex h-screen flex-col font-mono">
+        <div class="grow">
+            <Central>agrocybernetyka.pl (alpha)</Central>
+        </div>
+        <div class="mb-2 flex-none">
+            <Central>
+                powered by<br />
+                <a href="https://grupa.robocza.org">Grupa Robocza</a><br />
+                 2023
+            </Central>
+        </div>
     </div>
 </Layout>
