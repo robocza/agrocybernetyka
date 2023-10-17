@@ -6,7 +6,17 @@ import Central from '@layouts/elements/arrangement/Central.astro';
 <Layout title="Agrocybernetyka">
     <div class="flex h-screen flex-col font-mono">
         <div class="grow">
-            <Central>agrocybernetyka.pl (alpha)</Central>
+            <Central>
+                agrocybernetyka.pl (alpha)
+                <br />
+                <br />
+                <form name="mailing" method="POST" data-netlify="true">
+                    <label>
+                        <input class="mail" name="mail" type="email" required placeholder="mail@agrocybernetyka.pl" />
+                    </label>
+                    <button type="submit">Wyślij</button>
+                </form>
+            </Central>
         </div>
         <div class="mb-2 flex-none">
             <Central>
