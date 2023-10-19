@@ -1,29 +1,54 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import Central from '@layouts/elements/arrangement/Central.astro';
+import Footer from '@components/Footer.astro';
+import LogoAgrocybernetyka from '../components/assets/LogoAgrocybernetyka.astro';
+import Container from '@layouts/elements/Container.astro';
 ---
 
 <Layout title="Agrocybernetyka">
-    <div class="flex h-screen flex-col font-mono">
-        <div class="grow">
-            <Central>
-                agrocybernetyka.pl (alpha)
-                <br />
-                <br />
-                <form name="mailing" method="POST" data-netlify="true">
-                    <label>
-                        <input class="mail" name="mail" type="email" required placeholder="mail@agrocybernetyka.pl" />
-                    </label>
-                    <button type="submit">Wyślij</button>
-                </form>
-            </Central>
+    <div class="flex min-h-screen flex-col">
+        <div class="grow bg-green py-8 font-mono uppercase text-white sm:flex sm:flex-col sm:justify-around">
+            <Container>
+                <a class="inline-block w-60 pb-8 sm:w-96" href="https://agrocybernetyka.pl">
+                    <LogoAgrocybernetyka />
+                </a>
+            </Container>
+            <Container>
+                <p class="mb-8">
+                    Agrocybernetyka to inicjatywa, która za pomocą zrównoważonych technologii cyfrowych opracowuje i wprowadza innowacje związane z produkcją
+                    żywności i surowców dla przemysłu spożywczego.
+                </p>
+                <p class="mb-8">Nasza wizja zakłada harmonijną integrację technologii z przyrodą, przynosząc korzyści dla naszej planety.</p>
+                <p>
+                    Charakteryzuje nas podejście systemowe i działanie na wielu poziomach szczegółowości: od zakładania domowych mikro-ogrodów, po analizy
+                    globalnych systemów żywnościowych.
+                </p>
+            </Container>
         </div>
-        <div class="mb-2 flex-none">
-            <Central>
-                powered by<br />
-                <a href="https://grupa.robocza.org">Grupa Robocza</a><br />
-                 2023
-            </Central>
+        <div class="bg-white py-8 font-mono uppercase text-black">
+            <Container>
+                <Central>
+                    <p class="mb-8 max-w-md">
+                        Dołącz do naszej listy mailingowej i bądź na bieżąco z tym co się u nas dzieje. <br />
+                         Piszemy rzadko, ale treściwie.
+                    </p>
+                    <form name="mailing" method="POST" data-netlify="true">
+                        <label>
+                            <input class="min-w-60 border border-green" name="mail" type="email" required placeholder="adres e-mail" />
+                        </label>
+                        <div class="block sm:inline-block">
+                            <button
+                                type="submit"
+                                class="min-w-32 mt-2 inline-block border border-green bg-lightgreen px-4 py-2 font-mono uppercase text-white hover:bg-green sm:ml-2 sm:mt-0"
+                            >
+                                Zapisz się
+                            </button>
+                        </div>
+                    </form>
+                </Central>
+            </Container>
         </div>
+        <Footer />
     </div>
 </Layout>
