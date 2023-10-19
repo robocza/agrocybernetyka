@@ -10,7 +10,11 @@ module.exports = {
             colors: {
                 green: '#04712E',
                 lightgreen: '#05AA44'
-            }
+            },
+            screens: {
+                'xxs': '360px',
+                'xs': '480px',
+            },
         },
         fontFamily: {
             mono: ['GT America Mono', ...defaultTheme.fontFamily.sans],
