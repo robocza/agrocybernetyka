@@ -1,0 +1,28 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Central from '@layouts/elements/arrangement/Central.astro';
+import Container from '../layouts/elements/Container.astro';
+import MailLink from '@components/MailLink.astro';
+---
+
+<Layout title="Zapisano do newslettera - Agrocybernetyka">
+    <div class="flex min-h-screen flex-col">
+        <div class="grow bg-green font-mono uppercase text-white sm:flex sm:flex-col sm:justify-around">
+            <div class="bg-white py-8 text-black">
+                <Container>
+                    <Central>
+                        <p class="mb-8 max-w-xl">
+                            Dziękujemy za dopisanie się do lisy mailngowej.<br />
+                             Jeśli masz jakiekolwiek sugestie lub pytania, śmiało pisz na <MailLink email="sekretariat@agrocybernetyka.pl" />
+                        </p>
+                        <a
+                            class="min-w-32 mt-2 inline-block border border-green bg-lightgreen px-4 py-2 font-mono uppercase text-white hover:bg-green sm:ml-2 sm:mt-0"
+                            href="/"
+                            >Powrót na agrocybernetyka.pl
+                        </a>
+                    </Central>
+                </Container>
+            </div>
+        </div>
+    </div>
+</Layout>

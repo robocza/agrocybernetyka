@@ -10,7 +10,7 @@ import Container from '@layouts/elements/Container.astro';
     <div class="flex min-h-screen flex-col">
         <div class="grow bg-green py-8 font-mono uppercase text-white sm:flex sm:flex-col sm:justify-around">
             <Container>
-                <a class="inline-block w-60 pb-8 sm:w-96" href="https://agrocybernetyka.pl">
+                <a class="inline-block w-60 pb-8 sm:w-96" href="/">
                     <LogoAgrocybernetyka />
                 </a>
             </Container>
@@ -33,7 +33,7 @@ import Container from '@layouts/elements/Container.astro';
                         Dołącz do naszej listy mailingowej i bądź na bieżąco z tym co się u nas dzieje. <br />
                          Piszemy rzadko, ale treściwie.
                     </p>
-                    <form name="mailing" method="POST" data-netlify="true">
+                    <form name="mailing" method="POST" data-netlify="true" action="/zapisano-do-newslettera">
                         <label>
                             <input class="min-w-60 border border-green" name="mail" type="email" required placeholder="adres e-mail" />
                         </label>
