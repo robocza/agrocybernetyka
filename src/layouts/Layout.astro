@@ -1,9 +1,25 @@
 ---
+import Link from '@components/Link.astro';
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
+import Config from '../../astro.config.mjs';
+
 export interface Props {
     title: string;
+    language: string;
 }
 
 const { title } = Astro.props;
+const language = Astro.currentLocale;
+
+const localeSwitcherUrls = Config.i18n.locales
+    .filter((locale) => locale !== language)
+    .map((locale) => {
+        return {
+            locale: locale,
+            url: getRelativeLocaleUrl(locale),
+        };
+    });
 ---
 
 <!doctype html>
@@ -23,7 +39,10 @@ const { title } = Astro.props;
             }
         </style>
     </head>
-    <body class="w-full min-w-[320px]">
+    <body class="relative w-full min-w-[320px]">
+        <nav class="absolute right-0 top-0 m-2">
+            {localeSwitcherUrls.map((localeUrl) => <Link url={localeUrl.url} text={localeUrl.locale} className="text-white uppercase hover:underline" />)}
+        </nav>
         <slot />
     </body>
 </html>

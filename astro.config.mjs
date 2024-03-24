@@ -6,6 +6,13 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
     // output: 'server',
     // adapter: netlify(),
+    i18n: {
+        defaultLocale: "pl",
+        locales: ["en", "pl"],
+        routing: {
+            prefixDefaultLocale: false
+        }
+    },
     server: {
         host: true,
         port: 3000

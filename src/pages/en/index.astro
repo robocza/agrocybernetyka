@@ -6,7 +6,7 @@ import LogoAgrocybernetyka from '@components/assets/LogoAgrocybernetyka.astro';
 import Container from '@layouts/elements/Container.astro';
 ---
 
-<Layout title="Agrocybernetyka">
+<Layout title="Agrocybernetics initiative | agrocybernetyka.pl">
     <div class="flex min-h-screen flex-col">
         <div class="grow bg-lightgreen py-16 font-mono uppercase text-white sm:flex sm:flex-col sm:justify-around sm:py-24">
             <Container>
@@ -16,16 +16,14 @@ import Container from '@layouts/elements/Container.astro';
             </Container>
             <Container>
                 <p class="mb-8">
-                    Agrocybernetyka to inicjatywa, która za pomocą zrównoważonych technologii cyfrowych opracowuje i wprowadza innowacje związane z produkcją i
-                    konsumpcją żywności.
+                    Agrocybernetics is an initiative that uses sustainable digital technologies to develop and innovate food production and consumption.
                 </p>
                 <p class="mb-8">
-                    Nasza wizja zakłada harmonijną integrację technologii z przyrodą. Wierzymy, że w ten sposób zmienimy dotychczasowe podejście do rolnictwa,
-                    co przyniesie korzyści naszej planecie i jej mieszkańcom.
+                    Our vision is to harmoniously integrate technology with nature. In doing so, we hope to change the current approach to agriculture, which we
+                    believe would benefit the planet and its inhabitants.
                 </p>
                 <p>
-                    Charakteryzuje nas podejście systemowe i działanie na wielu poziomach szczegółowości: od zakładania domowych mikro-ogrodów, po analizy
-                    systemów żywnościowych.
+                    We value a systemic and multi-layered approach: starting with establishment of home micro-gardens, through food system analyses and beyond.
                 </p>
             </Container>
         </div>
@@ -33,25 +31,25 @@ import Container from '@layouts/elements/Container.astro';
             <Container>
                 <Central>
                     <p class="mb-8 max-w-md">
-                        Dołącz do naszej listy mailingowej i bądź na bieżąco z tym co się u nas dzieje. <br />
-                        Piszemy rzadko, ale treściwie.
+                        Join our newsletter and stay up to date with our progress. <br />
+                        Currently available only in Polish.
                     </p>
                     <form name="mailing" method="POST" data-netlify="true" action="/zapisano-do-newslettera">
                         <label>
-                            <input class="min-w-60 border border-green" name="mail" type="email" required placeholder="adres e-mail" />
+                            <input class="min-w-60 border border-green" name="mail" type="email" required placeholder="e-mail address" />
                         </label>
                         <div class="block sm:inline-block">
                             <button
                                 type="submit"
                                 class="mt-2 inline-block min-w-32 border border-green bg-lightgreen px-4 py-2 font-mono uppercase text-white hover:bg-green sm:ml-2 sm:mt-0"
                             >
-                                Zapisz się
+                                Sign up
                             </button>
                         </div>
                     </form>
                 </Central>
             </Container>
         </div>
-        <Footer privacyPolicyLabel="Polityka prywatności" />
+        <Footer privacyPolicyLabel="Privacy policy (PL)" />
     </div>
 </Layout>
