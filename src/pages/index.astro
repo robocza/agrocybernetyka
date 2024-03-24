@@ -4,6 +4,7 @@ import Central from '@layouts/elements/arrangement/Central.astro';
 import Footer from '@components/Footer.astro';
 import LogoAgrocybernetyka from '@components/assets/LogoAgrocybernetyka.astro';
 import Container from '@layouts/elements/Container.astro';
+import DiscordInvitation from '@components/DiscordInvitation.astro';
 ---
 
 <Layout title="Agrocybernetyka">
@@ -30,26 +31,33 @@ import Container from '@layouts/elements/Container.astro';
             </Container>
         </div>
         <div class="bg-white py-8 font-mono uppercase text-black">
-            <Container>
-                <Central>
-                    <p class="mb-8 max-w-md">
-                        Dołącz do naszej listy mailingowej i bądź na bieżąco z tym co się u nas dzieje. <br />
-                        Piszemy rzadko, ale treściwie.
-                    </p>
-                    <form name="mailing" method="POST" data-netlify="true" action="/zapisano-do-newslettera">
-                        <label>
-                            <input class="min-w-60 border border-green" name="mail" type="email" required placeholder="adres e-mail" />
-                        </label>
-                        <div class="block sm:inline-block">
-                            <button
-                                type="submit"
-                                class="mt-2 inline-block min-w-32 border border-green bg-lightgreen px-4 py-2 font-mono uppercase text-white hover:bg-green sm:ml-2 sm:mt-0"
-                            >
-                                Zapisz się
-                            </button>
-                        </div>
-                    </form>
-                </Central>
+            <Container maxWidth="max-w-screen-lg">
+                <div class="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-8 lg:divide-x lg:divide-solid">
+                    <div>
+                        <Central>
+                            <p class="mb-8 max-w-md">
+                                Dołącz do naszej listy mailingowej i bądź na bieżąco z tym co się u nas dzieje. <br />
+                                Piszemy rzadko, ale treściwie.
+                            </p>
+                            <form name="mailing" method="POST" data-netlify="true" action="/zapisano-do-newslettera">
+                                <label>
+                                    <input class="min-w-60 border border-green" name="mail" type="email" required placeholder="adres e-mail" />
+                                </label>
+                                <div class="block sm:inline-block">
+                                    <button
+                                        type="submit"
+                                        class="mt-2 inline-block min-w-32 border border-green bg-lightgreen px-4 py-2 font-mono uppercase text-white hover:bg-green sm:ml-2 sm:mt-0"
+                                    >
+                                        Zapisz się
+                                    </button>
+                                </div>
+                            </form>
+                        </Central>
+                    </div>
+                    <div>
+                        <DiscordInvitation text="Buduj z nami społeczność na Discordzie" label="Dołącz" />
+                    </div>
+                </div>
             </Container>
         </div>
         <Footer privacyPolicyLabel="Polityka prywatności" />
