@@ -10,12 +10,11 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "cs-check": "yarn lint-prettier --check",
-    "cs-fix": "yarn lint-prettier --write",
+    "cs-check": "npm lint-prettier --check",
+    "cs-fix": "npm lint-prettier --write",
     "lint-prettier": "prettier \"**/*.{js,jsx,ts,tsx,md,mdx,astro}\""
   },
   "dependencies": {
-    "@astrojs/netlify": "5.2.0",
     "@astrojs/tailwind": "5.1.0",
     "@tailwindcss/typography": "^0.5.13",
     "astro": "4.7.0",
@@ -33,6 +32,5 @@
   "engines": {
     "node": "^20.12.2"
   },
-  "engineStrict": true,
-  "packageManager": "yarn@4.1.1"
+  "engineStrict": true
 }
