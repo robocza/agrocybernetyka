@@ -1,2 +1,3 @@
 SERVER_NAME=agrocybernetyka.grupa-robocza.ddns.net
 NGINX_SERVER_NAME=$SERVER_NAME
+NGINX_HTTPS_ONLY=true
