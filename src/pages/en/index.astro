@@ -5,6 +5,7 @@ import Footer from '@components/Footer.astro';
 import LogoAgrocybernetyka from '@components/assets/LogoAgrocybernetyka.astro';
 import Container from '@layouts/elements/Container.astro';
 import DiscordInvitation from '@components/DiscordInvitation.astro';
+import MailerLiteNewsletterForm from '@components/MailerLiteNewsletterForm.astro';
 ---
 
 <Layout title="Agrocybernetics initiative | agrocybernetyka.pl">
@@ -37,19 +38,7 @@ import DiscordInvitation from '@components/DiscordInvitation.astro';
                                 Join our newsletter and stay up to date with our progress. <br />
                                 Currently available only in Polish.
                             </p>
-                            <form name="mailing" method="POST" data-netlify="true" action="/zapisano-do-newslettera">
-                                <label>
-                                    <input class="min-w-60 border border-green" name="mail" type="email" required placeholder="e-mail address" />
-                                </label>
-                                <div class="block sm:inline-block">
-                                    <button
-                                        type="submit"
-                                        class="mt-2 inline-block min-w-32 border border-green bg-lightgreen px-4 py-2 font-mono uppercase text-white hover:bg-green sm:ml-2 sm:mt-0"
-                                    >
-                                        Sign up
-                                    </button>
-                                </div>
-                            </form>
+                            <MailerLiteNewsletterForm inputEmailPlaceholder="e-mail address" submitButtonLabel="Sign up" mailerLiteFormId="teGFwU"/>
                         </Central>
                     </div>
                     <div>
