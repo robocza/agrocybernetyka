@@ -1,0 +1,11 @@
+---
+interface Props {
+    inputEmailPlaceholder: string;
+    submitButtonLabel: string;
+    mailerLiteFormId: string;
+}
+
+const { inputEmailPlaceholder, submitButtonLabel, mailerLiteFormId } = Astro.props;
+---
+
+<div class="ml-embedded" data-form={mailerLiteFormId}></div>

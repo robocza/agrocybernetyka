@@ -5,6 +5,7 @@ import Footer from '@components/Footer.astro';
 import LogoAgrocybernetyka from '@components/assets/LogoAgrocybernetyka.astro';
 import Container from '@layouts/elements/Container.astro';
 import DiscordInvitation from '@components/DiscordInvitation.astro';
+import MailerLiteNewsletterForm from '@components/MailerLiteNewsletterForm.astro';
 ---
 
 <Layout title="Agrocybernetyka">
@@ -39,19 +40,7 @@ import DiscordInvitation from '@components/DiscordInvitation.astro';
                                 Dołącz do naszej listy mailingowej i bądź na bieżąco z tym co się u nas dzieje. <br />
                                 Piszemy rzadko, ale treściwie.
                             </p>
-                            <form name="mailing" method="POST" data-netlify="true" action="/zapisano-do-newslettera">
-                                <label>
-                                    <input class="min-w-60 border border-green" name="mail" type="email" required placeholder="adres e-mail" />
-                                </label>
-                                <div class="block sm:inline-block">
-                                    <button
-                                        type="submit"
-                                        class="mt-2 inline-block min-w-32 border border-green bg-lightgreen px-4 py-2 font-mono uppercase text-white hover:bg-green sm:ml-2 sm:mt-0"
-                                    >
-                                        Zapisz się
-                                    </button>
-                                </div>
-                            </form>
+                            <MailerLiteNewsletterForm inputEmailPlaceholder="adres e-mail" submitButtonLabel="Zapisz się" mailerLiteFormId="VqMYdZ"/>
                         </Central>
                     </div>
                     <div>
